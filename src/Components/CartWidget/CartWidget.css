@@ -1,0 +1,14 @@
+.cart {
+  display: flex;
+  color: white;
+  /* justify-content: space-between; */
+}
+
+.cart-img {
+  height: 2rem;
+}
+
+.cart-count {
+  margin-top: 0;
+  padding-left: 5px;
+}
