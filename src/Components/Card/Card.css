@@ -1,7 +1,8 @@
 .card-container {
   display: flex;
-
+  margin: auto 200px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .img-container {
   max-height: 250px;

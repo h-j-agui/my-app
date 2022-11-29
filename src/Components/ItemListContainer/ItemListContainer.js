@@ -17,8 +17,6 @@ function ItemListContainer({ greeting }) {
     <div className="item_container">
       <h1>{greeting}</h1>
       <Card />
-      <Card />
-      <Card />
     </div>
   );
 }
