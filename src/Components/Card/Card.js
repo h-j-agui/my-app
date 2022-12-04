@@ -1,92 +1,43 @@
-import React, { useState } from "react";
-import "./Card.css";
+import React, { useState, useEffect } from "react";
+import ItemCount from "../ItemCount/ItemCount";
+import "./CardContainer.css";
 
-const Card = () => {
+function CardContainer() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("https://www.googleapis.com/books/v1/volumes?q=kids")
+      .then((res) => res.json())
+
+      .then((data) => setData(data.items))
+      .catch((err) => console.log("Error", err));
+  }, []);
   // const [title, setTitle] = useState("Book");
+
+  console.log("this is the name", data);
+
   return (
     <div className="card-container">
-      <div className="img-container">
-        {
-          <img
-            src="https://res.cloudinary.com/ddauluwus/image/upload/v1669393313/vintage_ogyz0n.png"
-            alt="skiing"
-          />
-        }
-      </div>
-      <div className="img-container">
-        {
-          <img
-            src="https://res.cloudinary.com/ddauluwus/image/upload/v1669392737/waves_ag738p.png"
-            alt="waves"
-          />
-        }
-      </div>
-      <div className="img-container">
-        {
-          <img
-            src="https://res.cloudinary.com/ddauluwus/image/upload/v1669392947/dogs_cfs4ml.png"
-            alt="dogs"
-          />
-        }
-      </div>
-      <div className="img-container">
-        {
-          <img
-            src="https://res.cloudinary.com/ddauluwus/image/upload/v1669674279/Book%20Store/2_bsjltm.png"
-            alt="lost cities"
-          />
-        }
-      </div>
-      <div className="img-container">
-        {
-          <img
-            src="https://res.cloudinary.com/ddauluwus/image/upload/v1669674477/Book%20Store/3_w5qsat.png"
-            alt="Mark Twain"
-          />
-        }
-      </div>
-      <div className="img-container">
-        {
-          <img
-            src="https://res.cloudinary.com/ddauluwus/image/upload/v1669674492/Book%20Store/6_xunidf.png"
-            alt="Lolo"
-          />
-        }
-      </div>
-      <div className="img-container">
-        {
-          <img
-            src="https://res.cloudinary.com/ddauluwus/image/upload/v1669674247/Book%20Store/1_jpcf0q.png"
-            alt="sleigh"
-          />
-        }
-      </div>
-      <div className="img-container">
-        {
-          <img
-            src="https://res.cloudinary.com/ddauluwus/image/upload/v1669674509/Book%20Store/9_lxlyas.png"
-            alt="jugar arte"
-          />
-        }
-      </div>
-      <div className="img-container">
-        {
-          <img
-            src="https://res.cloudinary.com/ddauluwus/image/upload/v1669674485/Book%20Store/4_h0yahy.png"
-            alt="Jane Austen"
-          />
-        }
-      </div>
-      <div className="img-container">
-        {
-          <img
-            src="https://res.cloudinary.com/ddauluwus/image/upload/v1669674504/Book%20Store/8_mr3o8g.png"
-            alt="cuentos para ninos"
-          />
-        }
-      </div>
+      {data.map((book, i) => {
+        return (
+          <div className="img-container" key={i}>
+            <div className="title">
+              <h4>{book.volumeInfo.title.slice(0, 20)}...</h4>
+            </div>
+
+            {book.volumeInfo && (
+              <div className="img">
+                <img src={book.volumeInfo.imageLinks.thumbnail} />
+              </div>
+            )}
+            <div className="count">
+              <ItemCount />
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
-};
+}
 
-export default Card;
+export default CardContainer;

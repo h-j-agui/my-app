@@ -1,4 +1,5 @@
 import Card from "../Card/Card";
+
 function ItemListContainer({ greeting }) {
   //  const usuario = {
   //   name: "Hannah",
@@ -15,7 +16,7 @@ function ItemListContainer({ greeting }) {
 
   return (
     <div className="item_container">
-      <h1>{greeting}</h1>
+      <h2>{greeting}</h2>
       <Card />
     </div>
   );

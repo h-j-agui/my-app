@@ -1,0 +1,24 @@
+.card-container {
+  display: flex;
+  margin: 10px 200px;
+
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.img-container {
+  height: 300px;
+  width: 200px;
+  padding-bottom: 20px;
+  margin: 20px;
+}
+
+.title {
+  height: 50px;
+}
+
+.img {
+  height: 200px;
+}
+.count {
+  height: 50px;
+}

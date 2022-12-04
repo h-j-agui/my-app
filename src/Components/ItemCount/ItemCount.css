@@ -1,0 +1,16 @@
+.quantity-container {
+  margin: 10px;
+}
+
+.plus-minus {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding-bottom: 5px;
+}
+.addToCart {
+  padding: 4px;
+}
+.quant {
+  padding: 2px 20px;
+}
