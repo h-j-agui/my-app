@@ -3,9 +3,16 @@
   color: white;
   /* justify-content: space-between; */
 }
-
+.btn:hover {
+  cursor: pointer;
+}
 .cart-img {
   height: 2rem;
+  padding: 1px 6px;
+  margin-top: 9px;
+}
+.cart-img:hover {
+  cursor: pointer;
 }
 
 .cart-count {

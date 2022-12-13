@@ -11,10 +11,6 @@ function App() {
       <h2>Libreria</h2>
       <NavBar />
       <ItemListContainer greeting={"Welcome to the Book Store "} />
-      {state ? "Complete" : "Not finished"}
-      <div className="complete-btn">
-        <button onClick={() => setState(true)}>Complete</button>
-      </div>
     </div>
   );
 }

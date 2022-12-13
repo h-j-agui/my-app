@@ -1,0 +1,16 @@
+.item {
+  position: absolute;
+  top: 200%;
+  left: 20%;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+
+  opacity: 0;
+}
+.item:hover {
+  opacity: 5;
+}

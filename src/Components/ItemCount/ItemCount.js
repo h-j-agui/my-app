@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./ItemCount.css";
+import { Button } from "@chakra-ui/react";
 
 const ItemCount = () => {
   const [quantity, setQuantity] = useState(1);
@@ -17,10 +18,16 @@ const ItemCount = () => {
     }
   };
 
-  const addToCart = (quantity) => {
-    let total = quantity;
-    return total;
-  };
+  //   const handleSubmit = (e) => {
+  //     e.preventDefault();
+  //     axios
+  //       .post("", {
+  //         quantity,
+  //       })
+  //       .then((res) => {
+  //         setQuantity;
+  //       });
+  //   };
   return (
     <div className="quantity-container">
       <div className="plus-minus">
@@ -32,9 +39,16 @@ const ItemCount = () => {
           +
         </button>
       </div>
-      <button className="addToCart" onClick={addToCart}>
+      <Button
+        fontSize="14px"
+        border="2px"
+        borderColor="#ccd0d5"
+        size="md"
+        className="addToCart"
+        type="submit"
+      >
         Agregar al carrito
-      </button>
+      </Button>
     </div>
   );
 };
