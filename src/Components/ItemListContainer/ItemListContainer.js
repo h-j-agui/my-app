@@ -1,6 +1,6 @@
-import Card from "../Card/Card";
+import ItemList from "../ItemList/ItemList";
 
-function ItemListContainer({ greeting }) {
+function ItemListContainer(props) {
   //  const usuario = {
   //   name: "Hannah",
   //   age: 30,
@@ -16,8 +16,7 @@ function ItemListContainer({ greeting }) {
 
   return (
     <div className="item_container">
-      <h2>{greeting}</h2>
-      <Card />
+      <ItemList genero={props.genero} />
     </div>
   );
 }

@@ -1,0 +1,22 @@
+.item-container {
+  height: 355px;
+}
+.img-container {
+  background-color: red;
+  height: 200px;
+  width: 200px;
+  padding-bottom: 20px;
+  margin: 20px;
+}
+
+.title {
+  height: 50px;
+  font-weight: bold;
+}
+
+.img {
+  height: 200px;
+}
+.count {
+  height: 50px;
+}

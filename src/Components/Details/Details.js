@@ -11,9 +11,9 @@ import {
   Button,
   Portal,
 } from "@chakra-ui/react";
-import "./Item.css";
+import "./Details.css";
 
-function Item() {
+function Details() {
   return (
     <Popover>
       <PopoverTrigger>
@@ -34,4 +34,4 @@ function Item() {
   );
 }
 
-export default Item;
+export default Details;
