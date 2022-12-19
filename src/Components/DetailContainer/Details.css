@@ -14,3 +14,9 @@
 .item:hover {
   opacity: 5;
 }
+
+.popover-details {
+  width: 100px;
+  padding: 5px;
+  height: 200px;
+}
